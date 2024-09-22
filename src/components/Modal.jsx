@@ -17,7 +17,7 @@ export default function Component({ openModal, setOpenModal, p }) {
                 <div key={i}>
                   {(e.desc || e.write) && (
                     <h1
-                      className="font-semibold text-xl text-center text-gray-900 h-full bg-slate-300 p-10 rounded-md"
+                      className="font-semibold text-md text-center text-gray-900 h-full bg-slate-300 p-10 rounded-md"
                       hidden={e.write ? false : !hidden}
                       onClick={() => {
                         if (e.img) {
