@@ -4,7 +4,7 @@ import { Mesh } from "three";
 import gsap from "gsap";
 
 function Home({ scale }) {
-  const { scene } = useGLTF("models/modhome/help.gltf");
+  const { scene } = useGLTF("models/home/help.glb");
 
   const rotateHome = () => {
     const timeline = gsap.timeline();
@@ -29,5 +29,5 @@ function Home({ scale }) {
 
   return <primitive object={scene} />;
 }
-useGLTF.preload("models/modhome/help.gltf");
+useGLTF.preload("models/home/help.glb");
 export default Home;
