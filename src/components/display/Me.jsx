@@ -4,7 +4,7 @@ import { Mesh } from "three";
 import gsap from "gsap";
 
 function Me({ scale }) {
-  const { scene } = useGLTF("models/girl/scene.glb");
+  const { scene } = useGLTF("models/girl/oscene.glb");
   const rotateCat = () => {
     const timeline = gsap.timeline();
     timeline.to(scene.rotation, {
@@ -39,5 +39,5 @@ function Me({ scale }) {
 
   return <primitive object={scene} />;
 }
-useGLTF.preload("models/girl/scene.glb");
+useGLTF.preload("models/girl/oscene.glb");
 export default Me;
