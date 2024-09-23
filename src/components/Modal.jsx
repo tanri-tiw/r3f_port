@@ -1,5 +1,10 @@
-import { Button, Modal } from "flowbite-react";
-import { Carousel } from "flowbite-react";
+import {
+  Button,
+  Carousel,
+  DarkThemeToggle,
+  Flowbite,
+  Modal,
+} from "flowbite-react";
 import { useEffect, useState } from "react";
 import info from "../utility/info";
 
@@ -7,17 +12,22 @@ export default function Component({ openModal, setOpenModal, p }) {
   const [hidden, setHidden] = useState(false);
 
   return (
-    <>
+    <Flowbite>
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
-        <Modal.Header>{info[p].name}</Modal.Header>
+        <Modal.Header>
+          {info[p].name} <DarkThemeToggle />
+        </Modal.Header>
         <Modal.Body>
-          <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+          <div className="h-80">
             <Carousel slide={false}>
               {info[p].content.map((e, i) => (
-                <div key={i}>
+                <div
+                  key={i}
+                  className="overflow-y-auto flex items-center justify-center w-full"
+                >
                   {(e.desc || e.write) && (
                     <h1
-                      className="font-semibold text-md text-center text-gray-900 h-full bg-slate-300 p-10 rounded-md"
+                      className="font-semibold text-md text-center text-gray-900 h-80 bg-slate-300 rounded-md p-10 dark:text-white dark:bg-transparent"
                       hidden={e.write ? false : !hidden}
                       onClick={() => {
                         if (e.img) {
@@ -42,7 +52,9 @@ export default function Component({ openModal, setOpenModal, p }) {
               ))}
             </Carousel>
           </div>
-          <p>Tip: click on an image to know more!</p>
+          <p className="dark:text-white">
+            Tip: click on an image to know more!
+          </p>
         </Modal.Body>
         <Modal.Footer>
           <Button color="gray" onClick={() => setOpenModal(false)}>
@@ -50,6 +62,6 @@ export default function Component({ openModal, setOpenModal, p }) {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </Flowbite>
   );
 }

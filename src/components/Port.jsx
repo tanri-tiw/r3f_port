@@ -112,11 +112,7 @@ function Port() {
             <Texts
               text={"Certificates"}
               scale={scale}
-              position={[
-                viewport.width > 600 ? 2 : 1,
-                viewport.width > 600 ? 0.5 : 0.5,
-                viewport.width > 600 ? -0.2 : 0,
-              ]}
+              position={[scale * 3, scale * 0.7, -scale * 0.2]}
               rotation={[0, Math.PI / 4, 0]}
             />
           </mesh>
@@ -130,11 +126,7 @@ function Port() {
             <Texts
               text={"Skills"}
               scale={scale}
-              position={[
-                viewport.width > 600 ? 1.3 : 0.6,
-                viewport.width > 600 ? 2.1 : 1.1,
-                viewport.width > 600 ? -1.5 : -0.5,
-              ]}
+              position={[scale * 2, scale * 2.5, scale * -2]}
               rotation={[0, -Math.PI / 4, 0]}
             />
           </mesh>
@@ -149,9 +141,12 @@ function Port() {
               text={"Projects"}
               scale={scale}
               position={[
-                viewport.width > 600 ? -2.8 : -1.3,
-                viewport.width > 600 ? 0.9 : 0.5,
-                viewport.width > 600 ? -0.1 : 0.5,
+                // viewport.width > 600 ? -2.8 : -1.3,
+                // viewport.width > 600 ? 0.9 : 0.5,
+                // viewport.width > 600 ? -0.1 : 0.5,4
+                scale * -3.5,
+                scale * 0.7,
+                scale * -0.1,
               ]}
               rotation={[0, Math.PI / 4, 0]}
             />
@@ -167,9 +162,12 @@ function Port() {
               text={"About Me"}
               scale={scale}
               position={[
-                viewport.width > 600 ? -1.2 : -0.6,
-                viewport.width > 600 ? 2.1 : 1.1,
-                viewport.width > 600 ? -1 : -0.5,
+                // viewport.width > 600 ? -1.2 : -0.6,
+                // viewport.width > 600 ? 2.1 : 1.1,
+                // viewport.width > 600 ? -1 : -0.5,
+                scale * -1.5,
+                scale * 2.7,
+                scale * -1,
               ]}
             />
           </mesh>
@@ -184,9 +182,12 @@ function Port() {
               text={"Connect"}
               scale={scale}
               position={[
-                viewport.width > 600 ? 1.2 : 0.6,
-                viewport.width > 600 ? -0.5 : -0.3,
-                viewport.width > 600 ? 1.5 : 0.7,
+                // viewport.width > 600 ? 1.2 : 0.6,
+                // viewport.width > 600 ? -0.5 : -0.3,
+                // viewport.width > 600 ? 1.5 : 0.7,
+                scale * 1.5,
+                scale * -0.7,
+                scale * 2.5,
               ]}
             />
           </mesh>
