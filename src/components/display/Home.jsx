@@ -6,7 +6,7 @@ import gsap from "gsap";
 function Home({ scale }) {
   const lod = new LOD();
 
-  const { scene } = useGLTF("models/modhome/reduced.glb");
+  const { scene } = useGLTF("models/reduced/output.glb");
 
   const rotateHome = () => {
     const timeline = gsap.timeline();
@@ -31,5 +31,5 @@ function Home({ scale }) {
 
   return <primitive object={scene} />;
 }
-useGLTF.preload("models/modhome/ohelp.glb");
+useGLTF.preload("models/reduced/output.glb");
 export default Home;
