@@ -23,11 +23,11 @@ export default function Component({ openModal, setOpenModal, p }) {
               {info[p].content.map((e, i) => (
                 <div
                   key={i}
-                  className="overflow-y-auto flex items-center justify-center w-full"
+                  className=" flex items-center justify-center w-full"
                 >
                   {(e.desc || e.write) && (
                     <h1
-                      className="font-semibold text-md text-center text-gray-900 h-80 bg-slate-300 rounded-md p-10 dark:text-white dark:bg-transparent"
+                      className="font-semibold text-md text-center text-gray-900 overflow-y-auto h-80  bg-slate-300 rounded-md p-10 dark:text-white dark:bg-transparent"
                       hidden={e.write ? false : !hidden}
                       onClick={() => {
                         if (e.img) {
