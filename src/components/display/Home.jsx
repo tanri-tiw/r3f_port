@@ -1,10 +1,12 @@
 import { useGLTF } from "@react-three/drei";
 import React, { useEffect } from "react";
-import { Mesh } from "three";
+import { Mesh, LOD } from "three";
 import gsap from "gsap";
 
 function Home({ scale }) {
-  const { scene } = useGLTF("models/modhome/ohelp.glb");
+  const lod = new LOD();
+
+  const { scene } = useGLTF("models/modhome/reduced.glb");
 
   const rotateHome = () => {
     const timeline = gsap.timeline();
