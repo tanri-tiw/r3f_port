@@ -8,6 +8,7 @@ import Light from "./Light";
 import MainPopup from "./MainPopup";
 import Modal from "./Modal";
 import Texts from "./text/Texts";
+import Fallback from "./display/Fallback";
 
 function Port() {
   const [showPopup, setShowPopup] = useState(false);
@@ -83,7 +84,7 @@ function Port() {
   return (
     <>
       <MainPopup handleCam={handleCam} vp={viewport} />
-      <Suspense fallback={null}>
+      <Suspense fallback={<Fallback />}>
         <Canvas id="three-canvas-container" shadows>
           <OrbitControls
             target={camTar}
@@ -100,8 +101,6 @@ function Port() {
           />
 
           <Light scale={scale} />
-
-          {/* <Box position={[-0.6, 0.8, -0.2]} args={[0.1, 0.1, 0.1]} /> */}
 
           <mesh
             onClick={() => {
