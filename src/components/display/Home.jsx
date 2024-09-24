@@ -21,12 +21,12 @@ function Home({ scale }) {
     // scene.position.set(0, 0, -0.5);
     rotateHome();
 
-    scene.traverse((child) => {
-      if (child instanceof Mesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
+    // scene.traverse((child) => {
+    //   if (child instanceof Mesh) {
+    //     child.castShadow = true;
+    //     child.receiveShadow = true;
+    //   }
+    // });
   }, [scene, scale]);
 
   return <primitive object={scene} />;

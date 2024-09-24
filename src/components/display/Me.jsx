@@ -25,12 +25,12 @@ function Me({ scale }) {
     scene.position.set(-0.5 * scale, 0 * scale, 0.75 * scale);
     scene.rotation.set(0, Math.PI / 4, 0);
     rotateCat();
-    scene.traverse((child) => {
-      if (child instanceof Mesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
+    // scene.traverse((child) => {
+    //   if (child instanceof Mesh) {
+    //     child.castShadow = true;
+    //     child.receiveShadow = true;
+    //   }
+    // });
   }, [scene]);
   useEffect(() => {
     scene.position.set(0 * scale, 0 * scale, 0.75 * scale);

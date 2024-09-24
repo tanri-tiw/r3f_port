@@ -5,10 +5,10 @@ function Light({ scale }) {
         intensity={0.5}
         color={"white"}
         position={[-11 * scale, 0 * scale, 0 * scale]}
-        castShadow
-        shadow-bias={-0.005}
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
+        // castShadow
+        // shadow-bias={-0.005}
+        // shadow-mapSize-width={2048}
+        // shadow-mapSize-height={2048}
       />
 
       <group
@@ -17,10 +17,10 @@ function Light({ scale }) {
       >
         <spotLight
           intensity={10}
-          castShadow
-          shadow-bias={-0.005}
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
+          // castShadow
+          // shadow-bias={-0.005}
+          // shadow-mapSize-width={1024}
+          // shadow-mapSize-height={1024}
         />
       </group>
     </>

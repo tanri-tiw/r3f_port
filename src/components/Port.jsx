@@ -85,7 +85,7 @@ function Port() {
     <>
       <MainPopup handleCam={handleCam} vp={viewport} />
       <Suspense fallback={<Fallback />}>
-        <Canvas id="three-canvas-container" shadows>
+        <Canvas id="three-canvas-container">
           <OrbitControls
             target={camTar}
             maxPolarAngle={Math.PI / 2}
