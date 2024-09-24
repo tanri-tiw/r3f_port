@@ -26,8 +26,8 @@ export default function Component({ openModal, setOpenModal, p }) {
                   className=" flex items-center justify-center w-full"
                 >
                   {(e.desc || e.write) && (
-                    <h1
-                      className="font-semibold text-md text-center text-gray-900 overflow-y-auto h-80  bg-slate-300 rounded-md p-10 dark:text-white dark:bg-transparent"
+                    <div
+                      className="font-semibold  text-center w-full text-gray-900 overflow-y-auto h-80  bg-slate-300 rounded-md  dark:text-white dark:bg-transparent flex flex-col justify-center items-center"
                       hidden={e.write ? false : !hidden}
                       onClick={() => {
                         if (e.img) {
@@ -35,8 +35,11 @@ export default function Component({ openModal, setOpenModal, p }) {
                         }
                       }}
                     >
-                      {e.desc || e.write}
-                    </h1>
+                      <h1 className="text-lg font-bold">
+                        {e.write != null ? e.write[0] : e.desc[0]}
+                      </h1>
+                      <p>{e.write != null ? e.write[1] : e.desc[1]}</p>
+                    </div>
                   )}
                   {e.img && (
                     <img
